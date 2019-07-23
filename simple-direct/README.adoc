@@ -1,0 +1,32 @@
+Simple Direct
+=============
+
+
+- build
++
+[source]
+----
+$ ./mvnw clean package -Pnative
+----
+
+- run
++
+[source]
+----
+2019-07-23 08:05:52,097 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Apache Camel 3.0.0-M2 (CamelContext: quarkus-camel-example) is starting
+2019-07-23 08:05:52,097 INFO  [org.apa.cam.imp.DefaultManagementStrategy] (main) JMX is disabled
+2019-07-23 08:05:52,098 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2019-07-23 08:05:52,098 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Route: route1 started and consuming from: timer://tick
+2019-07-23 08:05:52,098 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Route: route2 started and consuming from: direct://log
+2019-07-23 08:05:52,099 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Total 2 routes, of which 2 are started
+2019-07-23 08:05:52,099 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Apache Camel 3.0.0-M2 (CamelContext: quarkus-camel-example) started in 0.002 seconds
+2019-07-23 08:05:52,105 INFO  [io.quarkus] (main) Quarkus 0.19.1 started in 0.017s. Listening on: http://[::]:8080
+2019-07-23 08:05:52,105 INFO  [io.quarkus] (main) Installed features: [camel-core, cdi, resteasy]
+2019-07-23 08:05:53,098 INFO  [route2] (Camel (quarkus-camel-example) thread #0 - timer://tick) hello
+2019-07-23 08:05:54,099 INFO  [route2] (Camel (quarkus-camel-example) thread #0 - timer://tick) hello
+2019-07-23 08:05:55,098 INFO  [route2] (Camel (quarkus-camel-example) thread #0 - timer://tick) hello
+2019-07-23 08:05:55,291 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Apache Camel 3.0.0-M2 (CamelContext: quarkus-camel-example) is shutting down
+2019-07-23 08:05:55,292 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Apache Camel 3.0.0-M2 (CamelContext: quarkus-camel-example) uptime 3.195 seconds
+2019-07-23 08:05:55,292 INFO  [io.qua.cam.cor.run.sup.FastCamelContext] (main) Apache Camel 3.0.0-M2 (CamelContext: quarkus-camel-example) is shutdown in 0.001 seconds
+2019-07-23 08:05:55,293 INFO  [io.quarkus] (main) Quarkus stopped in 0.002s
+----
