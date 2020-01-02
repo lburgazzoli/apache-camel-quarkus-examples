@@ -13,7 +13,11 @@
         <unmarshal>
             <json library="Jackson" allowUnmarshallType="true"/>
         </unmarshal>
-        <log message="${body}"/>
+        <to uri="log:out?multiline=true&amp;showAll=true"/>
+        <setHeader name="gameID">
+            <simple>${body.score.gameID}</simple>
+        </setHeader>
+        <log message="${header.gameID}"/>
     </route>
 
 </routes>
